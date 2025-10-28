@@ -52,9 +52,9 @@ services:
       RABBITMQ_DEFAULT_USER: wuzapi
       RABBITMQ_DEFAULT_PASS: wuzapi
       RABBITMQ_DEFAULT_VHOST: /
-    # ports:
-      # - "5672:5672" # AMQP port
-      # - "15672:15672" # Management UI port
+    ports:
+      - "5672:5672" # AMQP port
+      - "15672:15672" # Management UI port
     volumes:
       - rabbitmq_data:/var/lib/rabbitmq
     networks:
