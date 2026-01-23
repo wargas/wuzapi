@@ -36,8 +36,8 @@ services:
       POSTGRES_USER: ${DB_USER:-wuzapi}
       POSTGRES_PASSWORD: ${DB_PASSWORD:-wuzapi}
       POSTGRES_DB: ${DB_NAME:-wuzapi}
-  ports:
-    - "${DB_PORT:-5432}:5432" # Uncomment to access the database directly from your host machine.
+    ports:
+      - "${DB_PORT:-5432}:5432"
     volumes:
       - db_data:/var/lib/postgresql/data
     networks:
